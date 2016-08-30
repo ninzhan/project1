@@ -51,6 +51,9 @@ li.dropdown a{
 .dropdown:hover .dropdown-content{
     display: block;
 }
+.dropdown-content:hover .dropdown a{
+    background-color:#666666
+}
 @font-face {
     font-family: 'norwesterregular';
     src: url('norwester-webfont.woff2') format('woff2'),
