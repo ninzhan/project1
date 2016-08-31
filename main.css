@@ -79,6 +79,7 @@ body{
 }
 .background{
     background-image: url("http://static1.gamespot.com/uploads/original/1551/15511094/3066900-legends-1940x1095.png");
+    height:100%;
 }
 .button{
     background-color: #447744;
