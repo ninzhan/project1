@@ -4,36 +4,40 @@
     <meta charset="UTF-8">
     <title>Chit</title>
     <link rel="stylesheet" type = "text/css" href="../../main.css">
+    <script src = "//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("../../header.html", function (data) {
+            $("#remove").replaceWith(data);
+        })
+    </script>
 
 </head>
 <body>
 
     <h1>CHIT</h1>
-    <ul class = "nav">
-        <li><a href = "../../index.html">Home</a></li>
 
-        <li class = "dropdown" id = "project">
-            <a class = dropbtn>Projects</a>
-            <div class="dropdown-content" id = "projects">
-                <a href = "http://ninzhan.github.io/DND4ECharsheetMaker/">DND Charsheet</a>
-                <a href = "http://ninzhan.github.io/DND4ECharsheetMaker/">Chit</a>
-            </div>
-        </li>
+    <div id = "remove"></div>
 
-        <li class = "dropdown" id = "blog">
-            <a class="dropbtn">Blogs</a>
-            <div class = "dropdown-content" id = "blogs">
-                <a href = "https://firelordgaming.blogspot.com">Gaming</a>
-                <a href = "https://firelorddesigns.blogspot.com">Design</a>
-                <a href = "https://agentredacted.blogspot.com">[REDACTED]</a>
-            </div>
-        </li>
-
-        <li><a href = "../../contact">Contact</a></li>
-        <li><a href="#">Mythos</a></li>
+    <p>Ok. I'm working on a card and token game called Chit. It is based around Poker and BS. I currently have some art
+        for it, and I should post that soon. I am working on card designs and box art. Below is kind of my thinking
+        process for how I'm going to get the game to production including </p>
+    <h2>Expected Components</h2>
+    <ul>
+        <li>54 Cards</li>
+        <li>20 Coins (10 Red, 10 Blue)</li>
     </ul>
 
-    Coming Soon!
+    <h2>Comments directly to me</h2>
+
+    <form action = "mailto:ninzhanultima@gmail.com" method = "post" enctype="text/plain">
+        <div class = "form"><span>Name:</span>  <input type = "text" name = "Name"></div>
+        <div class = "form"><span>Your Email:</span>  <input type = "text" name = "Email"></div>
+        <div class = "form"><span>Comment:</span>  <textarea name = "Comment" id = "comment">Testing</textarea></div>
+        <div class = "form">
+            <input type = "submit" name = "Submit">
+            <input type = "reset" name = "Reset">
+        </div>
+    </form>
 
 </body>
 </html>

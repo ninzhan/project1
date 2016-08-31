@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>League</title>
+    <link rel="stylesheet" type = "text/css" href="../../../main.css">
+    <script src = "//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("../../../header.html", function (data) {
+            $("#remove").replaceWith(data);
+        })
+    </script>
+</head>
+<body>
+<div class = "background">
+
+    <h1>League of Legends</h1>
+    <div id = "remove"></div>
+
+    <p> League of Legends is a MOBA or Multiplayer Online Battle Arena. The simplest way to learn how to play is to
+        listen to the community.</p>
+    <a href = "http://na.leagueoflegends.com/"><div class = "button" id = "center_link">Enter the world</div></a>
+
+</div>
+</body>
+</html>

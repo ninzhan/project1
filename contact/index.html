@@ -4,31 +4,16 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" type = "text/css" href="../main.css">
+    <script src = "//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("../header.html", function (data) {
+            $("#remove").replaceWith(data);
+        })
+    </script>
 </head>
 <body>
 <h1>Contact Info</h1>
-    <ul class = "nav">
-        <li><a href = "../index.html">Home</a></li>
-
-        <li class = "dropdown" id = "project">
-            <a class = dropbtn>Projects</a>
-            <div class="dropdown-content" id = "projects">
-                <a href = "http://ninzhan.github.io/DND4ECharsheetMaker/">DND Charsheet</a>
-            </div>
-        </li>
-
-        <li class = "dropdown" id = "blog">
-            <a class="dropbtn">Blogs</a>
-            <div class = "dropdown-content" id = "blogs">
-                <a href = "https://firelordgaming.blogspot.com">Gaming</a>
-                <a href = "https://firelorddesigns.blogspot.com">Design</a>
-                <a href = "https://agentredacted.blogspot.com">[REDACTED]</a>
-            </div>
-        </li>
-
-        <li><a href = "index.html">Contact</a></li>
-        <li><a href = "#">Mythos</a></li>
-    </ul>
+    <div id = "remove"></div>
     <div id = "contact">
         <p>My Email: <span id = "email">ninzhanultima@gmail.com</span> </p>
     </div>

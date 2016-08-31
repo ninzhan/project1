@@ -70,3 +70,21 @@ body{
 #contact{
     text-align: center;
 }
+.form{
+    padding: 3px;
+}
+#comment{
+    width: 10%;
+    height: 5%;
+}
+.background{
+    background-image: url("http://static1.gamespot.com/uploads/original/1551/15511094/3066900-legends-1940x1095.png");
+}
+.button{
+    background-color: #447744;
+    border-radius: 3px;
+}
+#center_link{
+    margin: auto;
+    width: 50px;
+}
