@@ -1,10 +1,16 @@
-
+html{
+    font-family:"Courier New", sans-serif;
+}
+h1{
+    text-align: center;
+    font-weight:bolder;
+}
 .nav {
     list-style-type: none;
     margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #ffffff;
+    background: linear-gradient(to right, white, #666666, white);
     text-align: center;
 }
 
@@ -15,14 +21,16 @@
 .nav a, .dropbtn {
     padding: 10px;
     display: inline-block;
-    color: #222222;
+    color: #000000;
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
+    font-weight: bold;
 }
 
 li a:hover {
-    background-color: #777777;
+    color: #ffffff;
+    background-color: #000000;
 }
 
 li.dropdown{
@@ -35,7 +43,7 @@ li.dropdown a{
 .dropdown-content{
     display: none;
     position:absolute;
-    background-color: #777777;
+    background: linear-gradient(to right, #666666, #777777);
     border-radius: 0 0 2px 2px;
 
 }
@@ -43,9 +51,17 @@ li.dropdown a{
     display: block;
 }
 .dropdown-content a:hover{
-    background-color: #666666;
+    background-color: #000000;
+    color:white;
 
+}
+.dropdown-content a:hover .dropdown{
+    background-color: #666666;
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+body{
+    width: 75%;
+    margin: auto;
 }
