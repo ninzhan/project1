@@ -6,13 +6,26 @@
     <link rel="stylesheet" type = "text/css" href="../../main.css">
     <script src = "//code.jquery.com/jquery.min.js"></script>
     <script>
-        $.get("../../header.html", function (data) {
-            $("#remove").replaceWith(data);
-        })
+        $(document).ready(
+                function () {
+                    $.get("../../header.html", function (data) {
+                        $("#remove").replaceWith(data);
+                        $(".rel-link").each(function(i, val){
+                            console.log($(val).attr('href'));
+                            var path = '../../';
+                            var final = path.concat($(val).attr('href'));
+                            $(val).attr('href', final);
+                            console.log(val.href);
+                        })
+                    }, 'html')
+                }
+        )
+
     </script>
 
 </head>
 <body>
+<div class = "cont">
 
     <h1>CHIT</h1>
 
@@ -28,16 +41,17 @@
     </ul>
 
     <h2>Comments directly to me</h2>
+    This will open your default email program.
 
     <form action = "mailto:ninzhanultima@gmail.com" method = "post" enctype="text/plain">
         <div class = "form"><span>Name:</span>  <input type = "text" name = "Name"></div>
         <div class = "form"><span>Your Email:</span>  <input type = "text" name = "Email"></div>
-        <div class = "form"><span>Comment:</span>  <textarea name = "Comment" id = "comment">Testing</textarea></div>
+        <div class = "form"><span>Comment:</span> <br>  <textarea name = "Comment" id = "comment">Hello</textarea></div>
         <div class = "form">
             <input type = "submit" name = "Submit">
             <input type = "reset" name = "Reset">
         </div>
     </form>
-
+</div>
 </body>
 </html>

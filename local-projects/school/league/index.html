@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>League</title>
-    <link rel="stylesheet" type = "text/css" href="../../../main.css">
+    <link rel="stylesheet" type = "text/css" href="main.css">
     <script src = "//code.jquery.com/jquery.min.js"></script>
     <script>
-        $.get("../../../header.html", function (data) {
-            $("#remove").replaceWith(data);
-        })
+        $(document).ready(
+                function () {
+                    $.get("../../../header.html", function (data) {
+                        $("#remove").replaceWith(data);
+                        $(".rel-link").each(function(i, val){
+                            console.log($(val).attr('href'));
+                            var path = '../../../';
+                            var final = path.concat($(val).attr('href'));
+                            $(val).attr('href', final);
+                            console.log(val.href);
+                        })
+                    }, 'html')
+                }
+        )
+
     </script>
 </head>
-<body>
-<div class = "background">
+<body class = "league">
+    <div class = "cont">
+        <h1>League of Legends</h1>
+        <div id = "remove"></div>
 
-    <h1>League of Legends</h1>
-    <div id = "remove"></div>
-
-    <p> League of Legends is a MOBA or Multiplayer Online Battle Arena. The simplest way to learn how to play is to
-        listen to the community.</p>
-    <a href = "http://na.leagueoflegends.com/"><div class = "button" id = "center_link">Enter the world</div></a>
-
-</div>
+        <p class = "league"> League of Legends is a MOBA or Multiplayer Online Battle Arena. Each player picks a champion
+            and then fights on a battlefield which contains monsters, turrets and other summoners. They then fight for control of the field</p>
+        <p class = "league">
+            There are a multiude of champions to play, guaranteeing a game experience for everyone.
+        </p>
+        <p class = "league">
+            Eventually, this will be an analytics page which will allow summoners to upgrade their game. Whether those
+            analytics are in a program or directly on the website is yet to be seen.
+        </p>
+        <a href = "http://na.leagueoflegends.com/" class = "button">Enter the world</a>
+    </div>
 </body>
 </html>

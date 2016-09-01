@@ -6,18 +6,32 @@
     <link rel="stylesheet" type = "text/css" href="../main.css">
     <script src = "//code.jquery.com/jquery.min.js"></script>
     <script>
-        $.get("../header.html", function (data) {
-            $("#remove").replaceWith(data);
-        })
+        $(document).ready(
+                function () {
+                    $.get("../header.html", function (data) {
+                        $("#remove").replaceWith(data);
+                        $(".rel-link").each(function(i, val){
+                            console.log($(val).attr('href'));
+                            var path = '../';
+                            var final = path.concat($(val).attr('href'));
+                            $(val).attr('href', final);
+                            console.log(val.href);
+                        })
+                    }, 'html')
+                }
+        )
+
     </script>
 </head>
 <body>
-<h1>Contact Info</h1>
+<div class = "cont">
+
+    <h1>Contact Info</h1>
     <div id = "remove"></div>
     <div id = "contact">
         <p>My Email: <span id = "email">ninzhanultima@gmail.com</span> </p>
     </div>
 
-
+</div>
 </body>
 </html>
