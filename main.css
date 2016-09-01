@@ -53,6 +53,7 @@ li.dropdown a{
 .dropdown-content a{
     display: block;
     text-align: left;
+    text-shadow: none;
 }
 .dropdown-content a:hover{
     background-color: #000000;
