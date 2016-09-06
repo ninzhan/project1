@@ -1,0 +1,12 @@
+.title li{
+    display: inline;
+}
+.info{
+    display: inline;
+    padding: 20px;
+}
+#cont{
+    width:50%;
+    margin: auto;
+
+}

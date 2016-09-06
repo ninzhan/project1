@@ -6,14 +6,17 @@ h1{
     font-family: Courier, sans-serif;
     text-shadow: 0 0 20px black;
     padding: 20px 20px 10px 20px;
+    font-size: 50px;
 }
 .nav {
     list-style-type: none;
-    margin: auto;
+    margin: 0 0 auto 14%;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(to right, white, #88aa88, #66aa66, #88aa88, white);
+    background: linear-gradient(to right, rgba(0,0,0,0), #88aa88, #66aa66, #88aa88, rgba(0,0,0,0));
     text-align: center;
+    left: 50%;
+    width: 72%
 }
 
 .nav li {
@@ -47,19 +50,19 @@ li.dropdown a{
 .dropdown-content{
     display: none;
     position:absolute;
-    background-color: #447744;
+    background-color: #66aa66;
     border-radius: 0 0 2px 2px;
 
 }
 .dropdown-content a{
     display: block;
     text-align: left;
-    text-shadow: none;
+    text-shadow: 0 0 20px black;
 }
 .dropdown-content a:hover{
     background-color: #000000;
     color:white;
-
+    text-shadow: 0 0 20px white;
 }
 .dropdown-content a:hover .dropdown{
     background-color: #666666;
@@ -89,4 +92,25 @@ body{
 #center_link{
     margin: auto;
     width:20%;
+}
+img{
+    float: left;
+    padding: 10px;
+    display: block;
+}
+a.hidden{
+    text-decoration: none;
+    color: black;
+}
+body {
+    background: url("http://opengameart.org/sites/default/files/story9_14_full.png") no-repeat center center fixed;
+}
+#content{
+    background: linear-gradient(to right, rgba(0,0,0,0), #88aa88 10%, #88aa88 90%, rgba(0,0,0,0));
+    padding: 20px 40px;
+}
+#inner{
+    width: 80%;
+    margin: auto;
+
 }
